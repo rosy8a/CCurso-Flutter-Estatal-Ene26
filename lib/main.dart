@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
+void main() => runApp(MiTienda());
+
+class MiTienda extends StatelessWidget {
+  const MiTienda({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Rosa Ochoa Cbtis 114'),
-          centerTitle: true,
-          backgroundColor: Colors.red[600],
+          leading: Icon(Icons.account_circle_rounded),
+          title: Text('Mi Tienda ROSA OCHOA'),
+          actions: [Icon(Icons.more_vert)],
+          //centerTitle: true,  
+          backgroundColor: const Color.fromARGB(255, 34, 240, 255),
+          elevation: 10,
         ),
-        body: Center(child: Text("Bienvenida a mi App   ")),
+        body: Center(child: Text("Lista de productos disponibles")),
       ),
-    ),
-  );
-}// fin de main
+    );
+  }
+}
